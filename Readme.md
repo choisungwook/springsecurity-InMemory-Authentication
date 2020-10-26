@@ -2,13 +2,19 @@
 * 메모리 계정의 로그인 인증
 > 계정이 DB로 관리되지 않고 인메모리(InMemory)로 관리
 
+<br>
+
 # 2. 요구사항
 * hello페이지 접근 시 인증 불필요
 * 이외의 페이지는 인증 요구
 
+<br>
+
 # 3. UML
-* Controller,SpringSecurity 구현 
+* Controller,SpringSecurity 패키지로 구성
 ![](./imgs/uml.png)
+
+<br>
 
 # 4. 구현
 ## 4.1 인증
@@ -29,7 +35,7 @@
 ``` 
 
 ## 4.2 계정 생성 
-* 인메모리 계정 관리(계정:testA, 비밀번호: password)
+* 인메모리 계정 생성(계정:testA, 비밀번호: password)
 ```java
 ; SecurityConfig.class
 
@@ -52,6 +58,8 @@ protected UserDetailsService userDetailsService() {
     );
 }
 ```
+
+<br>
 
 # 5. 참고자료
 * [1] SpringSecurity InMemory 공식문서: https://docs.spring.io/spring-security/site/docs/5.4.1/reference/html5/#servlet-authentication-inmemory
